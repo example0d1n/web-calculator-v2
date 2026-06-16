@@ -1,7 +1,79 @@
+* {
+    font-family: Kirby;
+}
+@font-face {
+    font-family: Kirby;
+    src: url(font/kirby-classic.ttf);
+}
 body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     background-image: url(https://64.media.tumblr.com/4a1f063c3b82a07271e84aca9184e4b8/tumblr_ocv6yoWDHD1s9fn3ko1_1280.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position:center ;
+    background-position: center;
     background-attachment: fixed;
+}
+/* output section */
+.display-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px 25px 0;
+}
+#display {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    font-size: 50px;
+    text-align: right;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: rgb(10, 210, 255);
+    border: 2px  #102a4a;
+}
+.kirby {
+    height: 100px;
+    width: 100px;
+    margin: 0;
+}
+/* calculator customization (behind the keys) */
+#calculator {
+    background:
+    rgba(0, 0, 0, 0.5);
+    width: 500px;
+    height: min-content;
+    border: 2px solid #102a4a;
+    border-radius: 10px;
+}
+/* button layout and spacing */
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+/* individual button customizations */
+button {
+    border: 2px solid rgb(54, 128, 176);
+    border-radius: 30%;
+    height: 100px;
+    width: 100px;
+    background:none;
+    color: black;
+    font-size: 50px;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: yellow;
+    box-shadow: 6px 6px 10px blue;
+}
+/* operator and AC button customizations */
+.operator-btn {
+    -webkit-text-fill-color: pink;
+}
+.clear{
+    -webkit-text-fill-color: rgb(9, 255, 9);
 }

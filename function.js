@@ -16,5 +16,17 @@ function calculate(){
         display.value = "Invalid Input";
     }
 }
+// sound file
 
-// Calculator delete function :)
+const clickSound = new Audio('https://cdn.pixabay.com/download/audio/2024/11/26/audio_f4caabbd05.mp3?filename=benkirb-shine-9-268911.mp3');
+// button click audio function
+
+const allButtons = document.querySelectorAll('Button');
+
+// Add the click listener to every button
+  allButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      clickSound.currentTime = 0; // Rewinds sound if clicked rapidly
+      clickSound.play();
+    });
+  });

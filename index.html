@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://freepngimg.com/download/technology/85529-allies-kirby-text-symbol-star-super.png" />
     <link rel="stylesheet" href="calculator.css" />
     <title>Star Calculator</title>
 </head>
 <body>
     <div id="calculator">
-        <input id="display" readonly>
+        <div class="display-row">
+            <input id="display" readonly>
+            <img src="https://freepngimg.com/download/technology/85529-allies-kirby-text-symbol-star-super.png" class="kirby" />
+        </div>
         <div id="keys">
             <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
-            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('7')"img src="photo/pixel star.avif">7</button>
             <button onclick="appendToDisplay('8')">8</button>
             <button onclick="appendToDisplay('9')">9</button>
             <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
@@ -27,9 +31,7 @@
             <button onclick="appendToDisplay('.')">.</button>
             <button onclick="calculate()">=</button>
             <button onclick="document.getElementById('display').value = document.getElementById('display').value.slice(0, -1)" class="operator-btn">DEL</button>
-            <button onclick="clearDisplay()" class="=operator-btn">AC</button>
-
-
+            <button onclick="clearDisplay()" class="clear">AC</button>
         </div>
     </div>
     <script src="function.js"></script>
