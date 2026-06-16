@@ -26,7 +26,7 @@
             <button onclick="appendToDisplay('0')">0</button>
             <button onclick="appendToDisplay('.')">.</button>
             <button onclick="calculate()">=</button>
-            <button id="delete-btn" onclick=>DEL</button>
+            <button onclick="document.getElementById('display').value = document.getElementById('display').value.slice(0, -1)" class="operator-btn">DEL</button>
             <button onclick="clearDisplay()" class="=operator-btn">AC</button>
 
 
